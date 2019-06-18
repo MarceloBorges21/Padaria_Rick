@@ -1,17 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-	<script src="~/Scripts/popper.min.js"></script>
-	<script src="~/Scripts/jquery-3.3.1.min.js"></script>
-	<script src="~/Scripts/bootstrap.min.js"></script>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>@ViewBag.Title - Padaria Rick</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/popper.min.js"></script>
+    <link href="~/Content/bootstrap1.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Padaria Rick</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" disable href="#">
             <img src="~/Imagens/coffee.png" alt="" width="40" height="40">
         </a>
@@ -19,19 +20,19 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ">
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#">Cadastre-se</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Cardapio</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>  
-                <li class="dropdown" id="menuLogin">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
-                    <div class="dropdown-menu" style="padding:15px; right: 0; left: auto;">
+        </div>
+        <div class="navbar-nav">
+            <ul class=" float-right navbar-nav">
+                <li class="dropdown nav-link ">
+                    <a class="dropdown-toggle mr-lg-5" href="#" data-toggle="dropdown">Login</a>
+                    <div class="dropdown-menu">
                         <form id="formLogin" action="~/Login/Logar">
                             <input type="text" name="Login" placeholder="Login" />
                             <input type="password" name="Senha" placeholder="Senha" />
@@ -41,6 +42,8 @@
                 </li>
             </ul>
         </div>
+        </ul>
+
     </nav>
     <div class="container body-content">
         @RenderBody()
@@ -49,6 +52,6 @@
             <p>&copy; @DateTime.Now.Year Padaria Rick</p>
         </footer>
     </div>
-    
+
 </body>
 </html>
