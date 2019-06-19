@@ -130,11 +130,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap1.css" />
     <Content Include="Content\Menu.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Imagens\coffee.png" />
+    <Content Include="Imagens\padaria1.jpg" />
+    <Content Include="Imagens\rick1.png" />
+    <Content Include="Imagens\Logo.png" />
+    <Content Include="Imagens\rick2.png" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\popper.min.js" />
