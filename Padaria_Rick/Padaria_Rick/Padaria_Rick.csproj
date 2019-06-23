@@ -129,7 +129,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Data\PadariaContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -191,11 +190,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
-    <Content Include="Views\Pessoa\Create.cshtml" />
-    <Content Include="Views\Pessoa\Delete.cshtml" />
-    <Content Include="Views\Pessoa\Details.cshtml" />
-    <Content Include="Views\Pessoa\Edit.cshtml" />
-    <Content Include="Views\Pessoa\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
