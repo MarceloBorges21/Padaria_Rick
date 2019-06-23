@@ -247,3 +247,9 @@ C:\Users\stag030\Desktop\New folder\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\D
 C:\Users\stag030\Desktop\New folder\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.csproj.CopyComplete
 C:\Users\stag030\Desktop\New folder\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.dll
 C:\Users\stag030\Desktop\New folder\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.pdb
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\EntityFramework.dll
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\EntityFramework.SqlServer.dll
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\EntityFramework.xml
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\EntityFramework.SqlServer.xml
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.nova.resources
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.csproj.GenerateResource.cache
