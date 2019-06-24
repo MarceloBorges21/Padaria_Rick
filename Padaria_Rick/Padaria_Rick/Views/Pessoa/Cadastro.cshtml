@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<h2><b>Cadastro</b></h2>
+<br />
+
+<div class="col-lg-6">
+    <form action="/Pessoa/AdicionaCliente" method="post" class="form-horizontal" id="form">
+
+        <div class="form-group">
+            <label for="nome" class="col-sm-2 control-label">Nome</label>
+            <div class="col-sm-10">
+                <input id="nome" class="form-control" name="pessoa.Nome"  value="@ViewBag.Pessoa.Nome" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="cpf" class="col-sm-2 control-label">CPF</label>
+            <div class="col-sm-10">
+                <input id="cpf" class="form-control" name="pessoa.CPF"  value="@ViewBag.Pessoa.CPF"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="endereco" class="col-sm-2 control-label">Endereço</label>
+            <div class="col-sm-10">
+                <input id="endereco" class="form-control" name="pessoa.Endereco" value="@ViewBag.Pessoa.Endereco" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="login" class="col-sm-2 control-label">Login</label>
+            <div class="col-sm-10">
+                <input id="login" class="form-control" name="pessoa.Login"  value="@ViewBag.Pessoa.Login"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="senha" class="col-sm-2 control-label">Senha</label>
+            <div class="col-sm-10">
+                <input type="password" id="senha" class="form-control" name="pessoa.Senha" />
+            </div>
+        </div>
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+</div>
+
