@@ -131,6 +131,7 @@
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
+    <Compile Include="Controllers\ProdutoController.cs" />
     <Compile Include="Data\PadariaContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -139,8 +140,26 @@
     <Compile Include="Migrations\201906232236057_nova.Designer.cs">
       <DependentUpon>201906232236057_nova.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906252034406_teste.cs" />
+    <Compile Include="Migrations\201906252034406_teste.Designer.cs">
+      <DependentUpon>201906252034406_teste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906261830537_retiradasnulos.cs" />
+    <Compile Include="Migrations\201906261830537_retiradasnulos.Designer.cs">
+      <DependentUpon>201906261830537_retiradasnulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906261852468_promocao_dentro_vendas.cs" />
+    <Compile Include="Migrations\201906261852468_promocao_dentro_vendas.Designer.cs">
+      <DependentUpon>201906261852468_promocao_dentro_vendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906271709108_as.cs" />
+    <Compile Include="Migrations\201906271709108_as.Designer.cs">
+      <DependentUpon>201906271709108_as.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DAO\CategoriaDAO.cs" />
     <Compile Include="Models\DAO\PessoaDAO.cs" />
+    <Compile Include="Models\DAO\ProdutoDAO.cs" />
     <Compile Include="Models\Entity\Categoria.cs" />
     <Compile Include="Models\Entity\Produto.cs" />
     <Compile Include="Models\Entity\Pessoa.cs" />
@@ -168,6 +187,7 @@
     <Content Include="Imagens\rick2.png" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery.maskedinput-1.1.4.pack.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -182,9 +202,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Categoria\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -193,6 +211,9 @@
     <None Include="packages.config" />
     <Content Include="Views\Pessoa\Index.cshtml" />
     <Content Include="Views\Pessoa\Cadastro.cshtml" />
+    <Content Include="Views\Produto\Index.cshtml" />
+    <Content Include="Views\Produto\Cadastro.cshtml" />
+    <Content Include="Views\Categoria\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -200,6 +221,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201906232236057_nova.resx">
       <DependentUpon>201906232236057_nova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906252034406_teste.resx">
+      <DependentUpon>201906252034406_teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906261830537_retiradasnulos.resx">
+      <DependentUpon>201906261830537_retiradasnulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906261852468_promocao_dentro_vendas.resx">
+      <DependentUpon>201906261852468_promocao_dentro_vendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906271709108_as.resx">
+      <DependentUpon>201906271709108_as.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

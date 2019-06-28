@@ -26,6 +26,14 @@ namespace Padaria_Rick.Models.DAO
             }
         }
 
+        public Pessoa BuscaPorId(int id)
+        {
+            using (var contexto = new PadariaContext())
+            {
+                return contexto.Pessoa.Find(id);
+            }
+        }
+
         public void Atualiza(Pessoa pessoa)
         {
             using (var context = new PadariaContext())

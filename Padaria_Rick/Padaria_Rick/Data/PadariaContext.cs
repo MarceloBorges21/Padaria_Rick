@@ -19,6 +19,7 @@ namespace Padaria_Rick.Data
 
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
+
 			modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 			modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
@@ -31,6 +32,6 @@ namespace Padaria_Rick.Data
 			   .HasKey(pp => new { pp.PromocaoId, pp.ProdutoId });
 
 			base.OnModelCreating(modelBuilder);
-		}
-	}
+		}       
+    }
 }

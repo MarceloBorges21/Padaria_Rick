@@ -9,7 +9,9 @@ namespace Padaria_Rick.Models.Entity
 	{
 		public int Id { get; set; }
 		public DateTime Data { get; set; }
-		public int Mesa { get; set; }
+        public int? PromocaoId { get; set; }
+        public Promocao Promocao { get; set; }
+        public int? Mesa { get; set; }
 		public char Status { get; set; }
 		public float Valor_Total { get; set; }
 		public string Forma_Pagamento { get; set; }		

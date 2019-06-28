@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Padaria_Rick.Models.Entity
 {
-	public class Produto	
+	public class Produto
 	{
 		public int Id { get; set; }
 		public string Nome { get; set; }

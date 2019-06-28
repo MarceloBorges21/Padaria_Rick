@@ -35,6 +35,7 @@ namespace Padaria_Rick.Controllers
                 if (ModelState.IsValid)
                 {
                     PessoaDAO dao = new PessoaDAO();
+                    //pessoa.Cifrar(pessoa.Senha);
                     pessoa.Tipo = 0;
                     dao.Adiciona(pessoa);
                     return RedirectToAction("Index");

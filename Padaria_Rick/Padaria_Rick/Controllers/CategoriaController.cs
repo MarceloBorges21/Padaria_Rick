@@ -1,133 +1,100 @@
-﻿using System;
+﻿using Padaria_Rick.Models.DAO;
+using Padaria_Rick.Models.Entity;
+using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Padaria_Rick.Data;
-using Padaria_Rick.Models.Entity;
 
 namespace Padaria_Rick.Controllers
 {
+
     public class CategoriaController : Controller
     {
-        private PadariaContext db = new PadariaContext();
-
         // GET: Categoria
         public ActionResult Index()
         {
-            var categoria = db.Categoria.Include(c => c.Pessoa);
-            return View(categoria.ToList());
+
+            CategoriaDAO dao = new CategoriaDAO();
+            IList<Categoria> categoria = dao.Lista();
+
+            PessoaDAO pessoa = new PessoaDAO();
+            IList<Categoria> pessoas = dao.Lista();
+            ViewBag.Pessoa = pessoas;
+
+            return View(categoria);
         }
 
         // GET: Categoria/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Categoria categoria = db.Categoria.Find(id);
-            if (categoria == null)
-            {
-                return HttpNotFound();
-            }
-            return View(categoria);
+            return View();
         }
 
         // GET: Categoria/Create
         public ActionResult Create()
         {
-            ViewBag.PessoaId = new SelectList(db.Pessoa, "Id", "Nome");
             return View();
         }
 
         // POST: Categoria/Create
-        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
-        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Descricao,PessoaId")] Categoria categoria)
+        public ActionResult Create(FormCollection collection)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Categoria.Add(categoria);
-                db.SaveChanges();
+                // TODO: Add insert logic here
+
                 return RedirectToAction("Index");
             }
-
-            ViewBag.PessoaId = new SelectList(db.Pessoa, "Id", "Nome", categoria.PessoaId);
-            return View(categoria);
+            catch
+            {
+                return View();
+            }
         }
 
         // GET: Categoria/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Categoria categoria = db.Categoria.Find(id);
-            if (categoria == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.PessoaId = new SelectList(db.Pessoa, "Id", "Nome", categoria.PessoaId);
-            return View(categoria);
+            return View();
         }
 
         // POST: Categoria/Edit/5
-        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
-        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Descricao,PessoaId")] Categoria categoria)
+        public ActionResult Edit(int id, FormCollection collection)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Entry(categoria).State = EntityState.Modified;
-                db.SaveChanges();
+                // TODO: Add update logic here
+
                 return RedirectToAction("Index");
             }
-            ViewBag.PessoaId = new SelectList(db.Pessoa, "Id", "Nome", categoria.PessoaId);
-            return View(categoria);
+            catch
+            {
+                return View();
+            }
         }
 
         // GET: Categoria/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Categoria categoria = db.Categoria.Find(id);
-            if (categoria == null)
-            {
-                return HttpNotFound();
-            }
-            return View(categoria);
+            return View();
         }
 
         // POST: Categoria/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
         {
-            Categoria categoria = db.Categoria.Find(id);
-            db.Categoria.Remove(categoria);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
+            try
             {
-                db.Dispose();
+                // TODO: Add delete logic here
+
+                return RedirectToAction("Index");
             }
-            base.Dispose(disposing);
+            catch
+            {
+                return View();
+            }
         }
     }
 }

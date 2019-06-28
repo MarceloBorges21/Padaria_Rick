@@ -9,7 +9,7 @@ namespace Padaria_Rick.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Padaria_Rick.Data.PadariaContext context)

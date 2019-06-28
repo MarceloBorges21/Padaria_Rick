@@ -259,3 +259,7 @@ C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\EntityFramew
 C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\EntityFramework.SqlServer.xml
 C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.nova.resources
 C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.csproj.GenerateResource.cache
+C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.teste.resources
+C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.retiradasnulos.resources
+C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.promocao_dentro_vendas.resources
+C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations._as.resources
