@@ -14,9 +14,15 @@ namespace Padaria_Rick.Controllers
         public ActionResult Index()
         {
             ProdutoDAO dao = new ProdutoDAO();           
-            IList<Produto> produto = dao.Lista();
+            IList<Produto> bebida = dao.ListarBebida();
+            IList<Produto> salgado = dao.ListarSalgado();
+            IList<Produto> doce = dao.ListarDoce();
 
-            return View(produto);
+            ViewBag.ListaBebida = bebida;
+            ViewBag.ListaSalgado = salgado;
+            ViewBag.ListaDoce = doce;
+
+            return View();
         }
   
         // GET: Produto/Create
@@ -24,7 +30,7 @@ namespace Padaria_Rick.Controllers
         {
             ViewBag.Produto = new Produto();
             CategoriaDAO dao = new CategoriaDAO();
-            IList<Categoria> categoria = dao.Lista();
+            IList<Categoria> categoria = dao.Listar();
             ViewBag.Categoria = categoria;
             ViewBag.Produto = new Produto();
             return View();
@@ -39,14 +45,14 @@ namespace Padaria_Rick.Controllers
                 ProdutoDAO dao = new ProdutoDAO();
                 produto.PessoaId = 1;
 
-                dao.Adiciona(produto);
+                dao.Adicionar(produto);
                 return RedirectToAction("Index");
             }
             else
             {
                 ViewBag.Produto = produto;
                 CategoriaDAO categoriaDAO = new CategoriaDAO();
-                ViewBag.Categoria = categoriaDAO.Lista();
+                ViewBag.Categoria = categoriaDAO.Listar();
                 return View("Cadastro");
             }
         }

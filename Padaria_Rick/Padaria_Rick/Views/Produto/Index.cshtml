@@ -4,19 +4,51 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Cardapio</h2>
+<h2 class="text-center">Cardapio</h2>
 <br />
 <table class="table table-dark">
     <thead>
         <tr>           
-            <th scope="col">Nome</th>           
+            <th class="text-center" scope="col">Bebidas</th>           
         </tr>
     </thead>
     <tbody>
-        @foreach (var pessoa in Model)
+        @foreach (var produto in ViewBag.ListaBebida)
         {
             <tr>              
-                <td>@pessoa.Nome</td>              
+                <td>@produto.Nome</td>              
+            </tr>
+        }
+    </tbody>
+</table>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th class="text-center" scope="col">Salgados</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in ViewBag.ListaSalgado)
+        {
+            <tr>
+                <td>@produto.Nome</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th class="text-center" scope="col">Doces</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in ViewBag.ListaDoce)
+        {
+            <tr>
+                <td>@produto.Nome</td>
             </tr>
         }
     </tbody>

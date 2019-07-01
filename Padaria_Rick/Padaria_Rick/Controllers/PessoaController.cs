@@ -15,7 +15,7 @@ namespace Padaria_Rick.Controllers
 		// GET: Pessoa
 		public ActionResult Index()
         {  
-            IList<Pessoa> pessoa = dao.Lista();
+            IList<Pessoa> pessoa = dao.Listar();
 
 			ViewBag.ListaPessoa = pessoa;
 
@@ -28,7 +28,6 @@ namespace Padaria_Rick.Controllers
         {			
             ViewBag.Pessoa = new Pessoa();
 			
-
 			if (Id == 0)
 			{
 				Id = 0;
@@ -41,16 +40,16 @@ namespace Padaria_Rick.Controllers
 			}
 			else
 			{
-				var pessoa = dao.BuscaPorId(Convert.ToInt32(Id));
+				var pessoa = dao.BuscarPorId(Convert.ToInt32(Id));
 
 				ViewBag.Pessoa.Id = Id;
 				ViewBag.ListaPessoa = pessoa;
 				
-					ViewBag.Nome = pessoa.Nome;
-					ViewBag.CPF = pessoa.CPF;
-					ViewBag.Endereco = pessoa.Endereco;
-					ViewBag.Login = pessoa.Login;
-					ViewBag.Senha = pessoa.Senha;				
+				ViewBag.Nome = pessoa.Nome;
+				ViewBag.CPF = pessoa.CPF;
+				ViewBag.Endereco = pessoa.Endereco;
+				ViewBag.Login = pessoa.Login;
+				ViewBag.Senha = pessoa.Senha;				
 			}
             return View();
         }
@@ -63,8 +62,8 @@ namespace Padaria_Rick.Controllers
 			{
 				if (ModelState.IsValid)
 				{
-					pessoa.Tipo = 0;
-					dao.Atualiza(pessoa);
+					pessoa.Tipo = TipoPessoa.Cliente;
+					dao.Atualizar(pessoa);
 					return RedirectToAction("Index");
 				}
 				else
@@ -77,9 +76,8 @@ namespace Padaria_Rick.Controllers
 			{ 
                 if (ModelState.IsValid)
                 {
-                    //pessoa.Cifrar(pessoa.Senha);
-                    pessoa.Tipo = 0;
-                    dao.Adiciona(pessoa);
+                    pessoa.Tipo = TipoPessoa.Cliente;
+                    dao.Adicionar(pessoa);
                     return RedirectToAction("Index");
                 }
                 else

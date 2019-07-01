@@ -132,7 +132,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
-    <Compile Include="Controllers\VendasController.cs" />
     <Compile Include="Data\PadariaContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -157,6 +156,14 @@
     <Compile Include="Migrations\201906271709108_as.Designer.cs">
       <DependentUpon>201906271709108_as.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907011933482_nomes.cs" />
+    <Compile Include="Migrations\201907011933482_nomes.Designer.cs">
+      <DependentUpon>201907011933482_nomes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907011936582_nom.cs" />
+    <Compile Include="Migrations\201907011936582_nom.Designer.cs">
+      <DependentUpon>201907011936582_nom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DAO\CategoriaDAO.cs" />
     <Compile Include="Models\DAO\PessoaDAO.cs" />
@@ -164,9 +171,9 @@
     <Compile Include="Models\Entity\Categoria.cs" />
     <Compile Include="Models\Entity\Produto.cs" />
     <Compile Include="Models\Entity\Pessoa.cs" />
-    <Compile Include="Models\Entity\Produto_FK_Venda.cs" />
+    <Compile Include="Models\Entity\Produto_Venda.cs" />
     <Compile Include="Models\Entity\Promocao.cs" />
-    <Compile Include="Models\Entity\Promocao_FK_Produto.cs" />
+    <Compile Include="Models\Entity\Promocao_Produto.cs" />
     <Compile Include="Models\Entity\Venda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -239,6 +246,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906271709108_as.resx">
       <DependentUpon>201906271709108_as.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907011933482_nomes.resx">
+      <DependentUpon>201907011933482_nomes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907011936582_nom.resx">
+      <DependentUpon>201907011936582_nom.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -267,3 +267,5 @@ C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria
 C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.retiradasnulos.resources
 C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.promocao_dentro_vendas.resources
 C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations._as.resources
+C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.nomes.resources
+C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.nom.resources

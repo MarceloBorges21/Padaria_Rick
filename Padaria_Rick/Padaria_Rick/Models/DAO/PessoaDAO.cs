@@ -9,7 +9,7 @@ namespace Padaria_Rick.Models.DAO
 {
     public class PessoaDAO 
     {
-        public void Adiciona(Pessoa pessoa)
+        public void Adicionar(Pessoa pessoa)
         {
             using (var context = new PadariaContext())
             {
@@ -18,7 +18,7 @@ namespace Padaria_Rick.Models.DAO
             }
         }
 
-        public IList<Pessoa> Lista()
+        public IList<Pessoa> Listar()
         {
             using (var context = new PadariaContext())
             {
@@ -26,7 +26,7 @@ namespace Padaria_Rick.Models.DAO
             }
         }
 
-        public Pessoa BuscaPorId(int id)
+        public Pessoa BuscarPorId(int id)
         {
             using (var contexto = new PadariaContext())
             {
@@ -34,7 +34,7 @@ namespace Padaria_Rick.Models.DAO
             }
         }
 
-        public void Atualiza(Pessoa pessoa)
+        public void Atualizar(Pessoa pessoa)
         {
             using (var context = new PadariaContext())
             {

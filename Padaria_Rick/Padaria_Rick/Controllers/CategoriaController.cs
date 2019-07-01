@@ -16,21 +16,15 @@ namespace Padaria_Rick.Controllers
         {
 
             CategoriaDAO dao = new CategoriaDAO();
-            IList<Categoria> categoria = dao.Lista();
+            IList<Categoria> categoria = dao.Listar();
 
             PessoaDAO pessoa = new PessoaDAO();
-            IList<Categoria> pessoas = dao.Lista();
+            IList<Categoria> pessoas = dao.Listar();
             ViewBag.Pessoa = pessoas;
 
             return View(categoria);
         }
-
-        // GET: Categoria/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
+       
         // GET: Categoria/Create
         public ActionResult Create()
         {
