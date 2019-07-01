@@ -20,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var pessoa in Model)
+        @foreach (var pessoa in ViewBag.Listapessoa)
         {
             <tr>
                 <th scope="row">@pessoa.Id</th>
@@ -29,7 +29,7 @@
                 <td>@pessoa.Endereco</td>
                 <td>@pessoa.Tipo</td>
                 <td>@pessoa.Login</td>
-                <td><a href="#">Editar</a>/<a href="#">Deletar</a></td>
+                <td><a href="~/Pessoa/Cadastro/@pessoa.Id">Editar</a>/<a href="#">Deletar</a></td>
             </tr>
         }
     </tbody>
