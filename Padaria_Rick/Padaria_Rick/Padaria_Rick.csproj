@@ -164,6 +164,14 @@
     <Compile Include="Migrations\201907011936582_nom.Designer.cs">
       <DependentUpon>201907011936582_nom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907012348435_as.cs" />
+    <Compile Include="Migrations\201907012348435_as.Designer.cs">
+      <DependentUpon>201907012348435_as.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907012352433_adasrdvfdfg.cs" />
+    <Compile Include="Migrations\201907012352433_adasrdvfdfg.Designer.cs">
+      <DependentUpon>201907012352433_adasrdvfdfg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DAO\CategoriaDAO.cs" />
     <Compile Include="Models\DAO\PessoaDAO.cs" />
@@ -174,6 +182,7 @@
     <Compile Include="Models\Entity\Produto_Venda.cs" />
     <Compile Include="Models\Entity\Promocao.cs" />
     <Compile Include="Models\Entity\Promocao_Produto.cs" />
+    <Compile Include="Models\Entity\TipoPessoa.cs" />
     <Compile Include="Models\Entity\Venda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -252,6 +261,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907011936582_nom.resx">
       <DependentUpon>201907011936582_nom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907012348435_as.resx">
+      <DependentUpon>201907012348435_as.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907012352433_adasrdvfdfg.resx">
+      <DependentUpon>201907012352433_adasrdvfdfg.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

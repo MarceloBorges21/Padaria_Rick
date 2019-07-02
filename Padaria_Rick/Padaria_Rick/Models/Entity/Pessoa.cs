@@ -1,6 +1,7 @@
 ﻿using Padaria_Rick.Data;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -9,10 +10,10 @@ using System.Web;
 
 namespace Padaria_Rick.Models.Entity
 {
-    public enum TipoPessoa {Cliente, Funcionario}
 	public class Pessoa 
 	{
 		public int Id { get; set; }
+		[Required(ErrorMessage = "Digite seu nome.")]
 		public string Nome { get; set; }
 		public string CPF { get; set; }
 		public string Endereco { get; set; }
