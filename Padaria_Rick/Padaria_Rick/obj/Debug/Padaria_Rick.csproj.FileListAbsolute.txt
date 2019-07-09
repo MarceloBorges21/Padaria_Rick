@@ -273,3 +273,5 @@ C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria
 C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.nom.resources
 C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations._adsaas.resources
 C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.adasrdvfdfg.resources
+C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations._adsaas.resources
+C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.adasrdvfdfg.resources

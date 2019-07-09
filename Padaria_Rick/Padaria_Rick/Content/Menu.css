@@ -2,3 +2,14 @@
     margin-top: 9px;
     left: 900px;
 }
+
+.filtrar {
+    width: 180px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.invisivel {
+    display: none;
+}
+
