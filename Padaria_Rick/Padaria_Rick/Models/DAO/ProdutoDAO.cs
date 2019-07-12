@@ -49,7 +49,7 @@ namespace Padaria_Rick.Models.DAO
         {
             using (var context = new PadariaContext())
             {
-                var produtos = context.Produto.Where(x => x.CategoriaId == 4).ToList();
+                var produtos = context.Produto.Where(x => x.CategoriaId == 5).ToList();
                 return produtos;
             }
         }
