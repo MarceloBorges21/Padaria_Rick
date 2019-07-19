@@ -9,7 +9,6 @@
 <br />
 <h2><b>Cadastro</b></h2>
 <br />
-
 <div class="col-lg-6">
 	<form action="/Pessoa/AdicionaCliente" method="post" class="form-horizontal" id="form">
 
@@ -18,35 +17,35 @@
 		<div class="form-group">
 			<label for="nome" class="col-sm-2 control-label">Nome</label>
 			<div class="col-sm-10">
-				<input id="nome" class="form-control" name="pessoa.Nome" value="@ViewBag.Nome" />				
+				<input id="nome" class="form-control" name="pessoa.Nome" required value="@ViewBag.Nome" />				
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="cpf" class="col-sm-2 control-label">CPF</label>
 			<div class="col-sm-10">
-				<input id="cpf" class="form-control" name="pessoa.CPF" value="@ViewBag.CPF" />
+				<input id="cpf" class="form-control" name="pessoa.CPF"  value="@ViewBag.CPF" />
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="endereco" class="col-sm-2 control-label">Endereço</label>
 			<div class="col-sm-10">
-				<input id="endereco" class="form-control" name="pessoa.Endereco" value="@ViewBag.Endereco" />
+				<input id="endereco" class="form-control" name="pessoa.Endereco" required value="@ViewBag.Endereco" />
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="login" class="col-sm-2 control-label">Login</label>
 			<div class="col-sm-10">
-				<input id="login" class="form-control" name="pessoa.Login" value="@ViewBag.Login" />
+				<input id="login" class="form-control" name="pessoa.Login" required value="@ViewBag.Login" />
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label for="senha" class="col-sm-2 control-label">Senha</label>
 			<div class="col-sm-10">
-				<input type="password" id="senha" class="form-control" name="pessoa.Senha" />
+				<input type="password" id="senha" class="form-control" required name="pessoa.Senha" />
 			</div>
 		</div>
 		<div class="col-sm-10">
@@ -56,4 +55,4 @@
 	</form>
 </div>
 
-<script src="~/Scripts/ScriptsDeTelas/Tela_Pessoa.js"></script>
+@*<script src="~/Scripts/ScriptsDeTelas/Tela_Pessoa.js"></script>*@

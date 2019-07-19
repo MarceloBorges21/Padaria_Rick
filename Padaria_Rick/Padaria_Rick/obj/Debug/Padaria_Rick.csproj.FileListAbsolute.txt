@@ -284,3 +284,12 @@ C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\System.Web.H
 C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\pt-br\System.Net.Http.Formatting.resources.dll
 C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\pt-br\System.Web.Http.resources.dll
 C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\System.Net.Http.Formatting.dll
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\System.Web.Http.dll
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\System.Web.Http.WebHost.dll
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\System.Net.Http.Formatting.xml
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\System.Web.Http.xml
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\System.Web.Http.WebHost.xml
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\pt-br\System.Web.Http.WebHost.resources.dll

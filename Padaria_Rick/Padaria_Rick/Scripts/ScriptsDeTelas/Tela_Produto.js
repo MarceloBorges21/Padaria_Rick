@@ -1,85 +1,94 @@
 ﻿$(document).ready(function ($) {
+	var $JQuery = jQuery.noConflict();
 	$("#Valor").maskMoney({ decimal: ",", thousands: "." });
+	filtraBebida();
+	filtraSalgado();
+	filtraDoce();
 });
 
-var campoFiltro = document.querySelector("#filtrar-bebida");
+function filtraBebida() {
+	var campoFiltro = document.querySelector("#filtrar-bebida");
 
-campoFiltro.addEventListener("input", function () {
-    var bebidas = document.querySelectorAll(".bebidas");
+	campoFiltro.addEventListener("input", function () {
+		var bebidas = document.querySelectorAll(".bebidas");
 
-    if (this.value.length > 0) {
-        for (var i = 0; i < bebidas.length; i++) {
-            var bebida = bebidas[i];
-            var tdNome = bebida.querySelector(".nomeBebida");
-            var nome = tdNome.textContent;
-            var expressao = new RegExp(this.value, "i");
+		if (this.value.length > 0) {
+			for (var i = 0; i < bebidas.length; i++) {
+				var bebida = bebidas[i];
+				var tdNome = bebida.querySelector(".nomeBebida");
+				var nome = tdNome.textContent;
+				var expressao = new RegExp(this.value, "i");
 
-            if (!expressao.test(nome)) {
-                bebida.classList.add("invisivel");
-            } else {
-                bebida.classList.remove("invisivel");
-            }
-        }
-    } else {
-        for (var i = 0; i < bebidas.length; i++) {
-            var bebida = bebidas[i];
-            bebida.classList.remove("invisivel");
-        }
-    }
-});
+				if (!expressao.test(nome)) {
+					bebida.classList.add("invisivel");
+				} else {
+					bebida.classList.remove("invisivel");
+				}
+			}
+		} else {
+			for (let i = 0; i < bebidas.length; i++) {
+				var bebidass = bebidas[i];
+				bebidass.classList.remove("invisivel");
+			}
+		}
+	});
+}
 
-var campoFiltro = document.querySelector("#filtrar-salgado");
+function filtraSalgado() {
+	var campoFiltro = document.querySelector("#filtrar-salgado");
 
-campoFiltro.addEventListener("input", function () {
-    var salgados = document.querySelectorAll(".salgados");
+	campoFiltro.addEventListener("input", function () {
+		var salgados = document.querySelectorAll(".salgados");
 
-    if (this.value.length > 0) {
-        for (var i = 0; i < salgados.length; i++) {
-            var salgado = salgados[i];
-            var tdNome = salgado.querySelector(".nomeSalgado");
-            var nome = tdNome.textContent;
-            var expressao = new RegExp(this.value, "i");
+		if (this.value.length > 0) {
+			for (var i = 0; i < salgados.length; i++) {
+				var salgado = salgados[i];
+				var tdNome = salgado.querySelector(".nomeSalgado");
+				var nome = tdNome.textContent;
+				var expressao = new RegExp(this.value, "i");
 
-            if (!expressao.test(nome)) {
-                salgado.classList.add("invisivel");
-            } else {
-                salgado.classList.remove("invisivel");
-            }
-        }
-    } else {
-        for (var i = 0; i < salgados.length; i++) {
-            var salgado = salgados[i];
-            salgado.classList.remove("invisivel");
-        }
-    }
-});
+				if (!expressao.test(nome)) {
+					salgado.classList.add("invisivel");
+				} else {
+					salgado.classList.remove("invisivel");
+				}
+			}
+		} else {
+			for (var I = 0; I < salgados.length; I++) {
+				var salgadoss = salgados[I];
+				salgadoss.classList.remove("invisivel");
+			}
+		}
+	});
+}
 
-var campoFiltro = document.querySelector("#filtrar-doce");
+function filtraDoce() {
+	var campoFiltro = document.querySelector("#filtrar-doce");
 
-campoFiltro.addEventListener("input", function () {
-    var pacientes = document.querySelectorAll(".doces");
+	campoFiltro.addEventListener("input", function () {
+		var doces = document.querySelectorAll(".doces");
 
-    if (this.value.length > 0) {
-        for (var i = 0; i < pacientes.length; i++) {
-            var paciente = pacientes[i];
-            var tdNome = paciente.querySelector(".nomeDoce");
-            var nome = tdNome.textContent;
-            var expressao = new RegExp(this.value, "i");
+		if (this.value.length > 0) {
+			for (var i = 0; i < doces.length; i++) {
+				var doce = doces[i];
+				var tdNome = doce.querySelector(".nomeDoce");
+				var nome = tdNome.textContent;
+				var expressao = new RegExp(this.value, "i");
 
-            if (!expressao.test(nome)) {
-                paciente.classList.add("invisivel");
-            } else {
-                paciente.classList.remove("invisivel");
-            }
-        }
-    } else {
-        for (var i = 0; i < pacientes.length; i++) {
-            var paciente = pacientes[i];
-            paciente.classList.remove("invisivel");
-        }
-    }
-});
-
+				if (!expressao.test(nome)) {
+					doce.classList.add("invisivel");
+				} else {
+					doce.classList.remove("invisivel");
+				}
+			}
+		} else {
+			for (var I = 0; I < doces.length; I++) {
+				var docess = doces[i];
+				docess.classList.remove("invisivel");
+			}
+		}
+	});
+}
 
 
 

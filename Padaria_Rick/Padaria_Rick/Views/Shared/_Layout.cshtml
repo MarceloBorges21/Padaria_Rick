@@ -7,51 +7,59 @@
 	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script src="~/Scripts/popper.min.js"></script>
-	<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+	@*<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
 	<script src="~/Scripts/jquery.maskedinput-1.1.4.pack.js"></script>
 	<script src="~/Scripts/jquery.maskMoney.js"></script>
-	<script src="~/Scripts/bootstrap.min.js"></script>
+	@*<script src="~/Scripts/popper.min.js"></script>
+	<script src="~/Scripts/jquery.validate.js"></script>
+	<script src="~/Scripts/bootstrap.min.js"></script>*@
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" disable href="/Home">
-            <img src="~/Imagens/coffee.png" alt="" width="40" height="40">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>       
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ">
-                <li class="nav-item ">
-                    <a class="nav-link" href="/Pessoa/Cadastro">Cadastre-se</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/Produto">Cardapio</a>
-                </li>
-            </ul>       
-            <ul class=" navbar-nav">
-                <li class="dropdown nav-link ">
-                    <a class="dropdown-toggle " href="#" data-toggle="dropdown">Login</a>
-                    <div class="dropdown-menu dropdown-menu-right bg-dark border-dark rounded-lg">
-                        <form id="formLogin"class="px-1" action="~/Login/Logar">
-                            <input type="text" class="border-dark rounded-lg"  name="Login" placeholder="Usuario" />
-                            <input type="password" name="Senha" class="border-dark rounded-lg" placeholder="Senha" />
-                            <button type="submit" id="btnLogin" class="btn btn-secondary btn-sm">Entrar</button>
-                        </form>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year Padaria Rick</p>
-        </footer>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" disable href="/Home">
+			<img src="~/Imagens/coffee.png" alt="" width="40" height="40">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ">
+				<li class="nav-item ">
+					<a class="nav-link" href="/Pessoa/Cadastro">Cadastre-se</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/Produto">Cardapio</a>
+				</li>
+			</ul>
+			<ul class=" navbar-nav">
+				<li class="dropdown nav-link ">
+					<a class="dropdown-toggle " href="#" data-toggle="dropdown">Login</a>
+					<div class="dropdown-menu dropdown-menu-right bg-dark border-dark rounded-lg">
+						<form id="formLogin" class="px-1" action="~/Login/Logar">
+							<input type="text" class="border-dark rounded-lg" name="Login" placeholder="Usuario" />
+							<input type="password" name="Senha" class="border-dark rounded-lg" placeholder="Senha" />
+							<button type="submit" id="btnLogin" class="btn btn-secondary btn-sm">Entrar</button>
+						</form>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container body-content">
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; @DateTime.Now.Year Padaria Rick</p>
+		</footer>
+	</div>
 
-    </div>
+	@section scripts{
+		@Scripts.Render("~/bundles/jquery");
+		@Scripts.Render("~/bundles/jqueryval");
+		@Scripts.Render("~/bundles/telas");
+		@Scripts.Render("~/bundles/bootstrap");
+		@Scripts.Render("~/bundles/popper");
+	}
 
 </body>
 </html>

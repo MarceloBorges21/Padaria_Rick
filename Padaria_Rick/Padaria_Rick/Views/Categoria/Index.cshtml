@@ -1,28 +1,32 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Lista categoria";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<link href="~/Content/Menu.css" rel="stylesheet" />
 
 <h2 class="text-center">Lista Categoria</h2>
 <br />
+<label>Filtrar descrição: </label>
+<input type="text" name="filtro" class="filtrar" id="filtrar-categoria" placeholder="Pesquisar">
 <table class="table table-dark">
-    <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Descricao</th>
-            <th scope="col">Func_Cadastrou</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var categoria in Model)
-        {
-            <tr>
-                <td>@categoria.Id</td>
-                <td>@categoria.Descricao</td>
-                <td>@categoria.PessoaId</td>
-            </tr>
-        }
-    </tbody>
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Descricao</th>
+			<th scope="col">Funcionario que cadastrou</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var categoria in Model)
+		{
+			<tr class="categoria">
+				<td>@categoria.Id</td>
+				<td class="nomeCategoria">@categoria.Descricao</td>
+				<td>@categoria.PessoaId</td>
+			</tr>
+		}
+	</tbody>
 </table>
 
+<script src="~/Scripts/ScriptsDeTelas/Tela_Categoria.js"></script>

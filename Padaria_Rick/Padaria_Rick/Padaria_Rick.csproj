@@ -215,7 +215,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery.maskedinput-1.1.4.pack.js" />
     <Content Include="Scripts\jquery.maskMoney.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\ScriptsDeTelas\Tela_Categoria.js" />
     <Content Include="Scripts\ScriptsDeTelas\Tela_Pessoa.js" />
     <Content Include="Scripts\ScriptsDeTelas\Tela_Produto.js" />
     <Content Include="Web.config" />
