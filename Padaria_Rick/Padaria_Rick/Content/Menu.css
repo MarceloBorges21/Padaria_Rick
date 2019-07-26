@@ -13,3 +13,10 @@
     display: none;
 }
 
+.campoInvalido {
+    border-color: red;
+}
+
+.campoValido {
+    border-color:limegreen;
+}

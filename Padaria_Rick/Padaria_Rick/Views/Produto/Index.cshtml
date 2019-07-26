@@ -7,54 +7,86 @@
 <h2 class="text-center"><u>Cardapio</u></h2>
 <br />
 
+<div class="">
 <label>Filtrar bebida: </label>
-<input type="text" name="filtro"  class="filtrar" id="filtrar-bebida" placeholder="Pesquisar">
+<input type="text" name="filtro" class="filtrar" id="filtrar-bebida" placeholder="Pesquisar">
 
-<table class="table table-dark">
+    <table class="table table-striped table-dark col-md-5 " style="margin-left:5px">
+        <thead>
+            <tr class="bg-info">
+                <th colspan="2" class="text-center"><h3>Bebidas</h3></th>
+            </tr>
+            <tr class="bg-info">
+                <th>Nome</th>
+                <th width="20%">Quantidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var produto in ViewBag.ListaBebida)
+            {
+                <tr class="bebidas">
+                    <td class="nomeBebida">@produto.Nome</td>
+                    <td>
+                        <form>
+                            <input type="number" name="Qntd" class="form-control form-control-sm" />
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+</div>
+
+<div class="mr-3">
+    <label>Filtrar salgado: </label>
+    <input type="text" name="filtro" class="filtrar" id="filtrar-salgado" placeholder="Pesquisar">
+    <table class="table table-striped table-dark col-md-5">
+        <thead>
+            <tr class="bg-info">
+                <th colspan="2" class="text-center"><h3>Salgados</h3></th>
+            </tr>
+            <tr class="bg-info">
+                <th>Nome</th>
+                <th width="20%">Quantidade</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var produto in ViewBag.ListaSalgado)
+            {
+                <tr class="salgados">
+                    <td class="nomeSalgado">@produto.Nome</td>
+                    <td>
+                        <form>
+                            <input type="number" name="Qntd" class="form-control form-control-sm" />
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+</div>
+
+<label>Filtrar doce: </label>
+<input type="text" name="filtro" class="filtrar" id="filtrar-doce" placeholder="Pesquisar">
+<table class="table table-striped table-dark col-md-5">
     <thead>
-        <tr>
-            <th class="col"><h3>Bebidas</h3></th>
+        <tr class="bg-info">
+            <th colspan="2" class="text-center"><h3>Doces</h3></th>
         </tr>
-        <tr>
+        <tr class="bg-info">
             <th>Nome</th>
-            <th>Quantidade</th>
+            <th width="20%">Quantidade</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var produto in ViewBag.ListaBebida)
+        @foreach (var produto in ViewBag.ListaDoce)
         {
-        <tr class="bebidas">
-            <td class="nomeBebida">@produto.Nome</td>
-            <td>
-                <form>
-                    <input type="number" name="Qntd" class="form-control form-control-sm" />
-                </form>
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
-<br />
-
-<label>Filtrar salgado: </label>
-<input type="text" name="filtro" class="filtrar" id="filtrar-salgado" placeholder="Pesquisar">
-<table class="table table-dark">
-    <thead>
-        <tr>
-            <th class="col"><h3>Salgados</h3></th>
-        </tr>
-        <tr>
-            <th>Nome</th>
-            <th>Quantidade</th>
-        </tr>
-       
-    </thead>
-    <tbody>
-        @foreach (var produto in ViewBag.ListaSalgado)
-        {
-            <tr class="salgados">
-                <td class="nomeSalgado">@produto.Nome</td>
-                <td >
+            <tr class="doces">
+                <td class="nomeDoce">@produto.Nome</td>
+                <td>
                     <form>
                         <input type="number" name="Qntd" class="form-control form-control-sm" />
                     </form>
@@ -63,33 +95,7 @@
         }
     </tbody>
 </table>
-<br />
 
-<label>Filtrar doce: </label>
-<input type="text" name="filtro"  class="filtrar" id="filtrar-doce" placeholder="Pesquisar">
-<table class="table table-dark">
-    <thead>
-        <tr>
-            <th class="col"><h3>Doces</h3></th>
-        </tr>
-        <tr>
-            <th>Nome</th>
-            <th>Quantidade</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var produto in ViewBag.ListaDoce)
-        {
-        <tr class="doces">
-            <td class="nomeDoce">@produto.Nome</td>
-            <td>
-                <form>
-                    <input type="number" name="Qntd" class="form-control form-control-sm" />
-                </form>
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
-
+<script src="~/Scripts/jquery-3.2.1.js"></script>
+<script src="~/Scripts/jquery.maskMoney.js"></script>
 <script src="~/Scripts/ScriptsDeTelas/Tela_Produto.js"></script>

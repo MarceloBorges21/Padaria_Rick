@@ -43,13 +43,16 @@ namespace Padaria_Rick.Models.DAO
             }
         }
 
-        public void Remover(Pessoa pessoa)
+        public bool Excluir(int id)
         {
-            using (var context = new PadariaContext())
+            bool valida = false;               
+            using (var contexto = new PadariaContext())
             {
-                context.Pessoa.Remove(pessoa);
-                context.SaveChanges();
-            }
+                contexto.Pessoa.Remove(contexto.Pessoa.Single(x => x.Id == id));
+                contexto.SaveChanges();
+                valida = true;
+            }                      
+            return valida;
         }
     }
 }

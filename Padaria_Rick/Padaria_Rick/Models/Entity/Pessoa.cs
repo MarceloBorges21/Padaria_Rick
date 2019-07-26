@@ -13,7 +13,6 @@ namespace Padaria_Rick.Models.Entity
 	public class Pessoa 
 	{
 		public int Id { get; set; }
-		[Required(ErrorMessage = "Digite seu nome.")]
 		public string Nome { get; set; }
 		public string CPF { get; set; }
 		public string Endereco { get; set; }

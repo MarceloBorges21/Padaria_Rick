@@ -1,4 +1,4 @@
-﻿$(document).ready(function ($) {
+﻿$(document).ready(function () {
 	var $JQuery = jQuery.noConflict();
 	$("#Valor").maskMoney({ decimal: ",", thousands: "." });
 	filtraBebida();
@@ -11,7 +11,7 @@ function filtraBebida() {
 
 	campoFiltro.addEventListener("input", function () {
 		var bebidas = document.querySelectorAll(".bebidas");
-
+        console.log("AQUI");
 		if (this.value.length > 0) {
 			for (var i = 0; i < bebidas.length; i++) {
 				var bebida = bebidas[i];

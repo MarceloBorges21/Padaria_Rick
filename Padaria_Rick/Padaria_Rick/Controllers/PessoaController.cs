@@ -40,7 +40,8 @@ namespace Padaria_Rick.Controllers
 			}
 			else
 			{
-				var pessoa = dao.BuscarPorId(Convert.ToInt32(Id));
+                ViewBag.Pessoa = new Pessoa();
+                var pessoa = dao.BuscarPorId(Convert.ToInt32(Id));
 
 				ViewBag.Pessoa.Id = Id;
 				ViewBag.ListaPessoa = pessoa;
@@ -86,7 +87,41 @@ namespace Padaria_Rick.Controllers
                 return View("Cadastro");
                 }
 			}
-		}     
+		}
+
+        public ActionResult Editar(int id)
+        {
+            ViewBag.Pessoa = new Pessoa();
+            var pessoa = dao.BuscarPorId(Convert.ToInt32(id));
+
+            ViewBag.Pessoa.Id = id;
+            ViewBag.ListaPessoa = pessoa;
+
+            ViewBag.Nome = pessoa.Nome;
+            ViewBag.CPF = pessoa.CPF;
+            ViewBag.Endereco = pessoa.Endereco;
+            ViewBag.Login = pessoa.Login;
+            ViewBag.Senha = pessoa.Senha;
+      
+            return View();
+        }
+
+      
+        [HttpPost]
+        public ActionResult EditarCliente(int id, Pessoa pessoa)
+        {
+
+                
+            return View(pessoa);           
+        }
+
+      
+        [HttpPost]
+        public ActionResult Excluir(int id)
+        {      
+            string validacao = (dao.Excluir(id) ? "Sim" : "Não");
        
+            return Json(validacao);  
+        }
     }
 }

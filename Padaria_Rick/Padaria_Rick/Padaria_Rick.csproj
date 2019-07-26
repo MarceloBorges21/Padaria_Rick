@@ -141,6 +141,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
+    <Compile Include="Controllers\PromocaosController.cs" />
     <Compile Include="Data\PadariaContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -181,6 +182,10 @@
     <Compile Include="Migrations\201907012352433_adasrdvfdfg.Designer.cs">
       <DependentUpon>201907012352433_adasrdvfdfg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907261742041_nos.cs" />
+    <Compile Include="Migrations\201907261742041_nos.Designer.cs">
+      <DependentUpon>201907261742041_nos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DAO\CategoriaDAO.cs" />
     <Compile Include="Models\DAO\PessoaDAO.cs" />
@@ -212,12 +217,17 @@
     <Content Include="Imagens\rick1.png" />
     <Content Include="Imagens\rick2.png" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery.maskedinput-1.1.4.pack.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery.mask.js" />
     <Content Include="Scripts\jquery.maskMoney.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\ScriptsDeTelas\Tela_Categoria.js" />
     <Content Include="Scripts\ScriptsDeTelas\Tela_Pessoa.js" />
@@ -234,8 +244,10 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Pessoa\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\Promocaos\" />
     <Folder Include="Views\Vendas\" />
   </ItemGroup>
   <ItemGroup>
@@ -280,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907012352433_adasrdvfdfg.resx">
       <DependentUpon>201907012352433_adasrdvfdfg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907261742041_nos.resx">
+      <DependentUpon>201907261742041_nos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

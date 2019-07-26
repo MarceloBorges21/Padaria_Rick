@@ -293,3 +293,4 @@ C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\System.Web.Ht
 C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\pt-br\System.Net.Http.Formatting.resources.dll
 C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\pt-br\System.Web.Http.resources.dll
 C:\Users\Dinopc\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\stag030\Desktop\Padaria_Rick\Padaria_Rick\Padaria_Rick\obj\Debug\Padaria_Rick.Migrations.nos.resources
