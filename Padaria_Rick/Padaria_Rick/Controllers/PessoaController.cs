@@ -20,61 +20,18 @@ namespace Padaria_Rick.Controllers
 			ViewBag.ListaPessoa = pessoa;
 
             return View();
-        }    
-
-        // GET: Pessoa/Create
-        [Route("CadastroCliente")]
-        public ActionResult Cadastro(int Id = 0)
-        {			
-            ViewBag.Pessoa = new Pessoa();
-			
-			if (Id == 0)
-			{
-				Id = 0;
-				ViewBag.Id = Id;
-				ViewBag.Nome = "";
-				ViewBag.CPF = "";
-				ViewBag.Endereco = "";
-				ViewBag.Login = "";
-				ViewBag.Senha = "";
-			}
-			else
-			{
-                ViewBag.Pessoa = new Pessoa();
-                var pessoa = dao.BuscarPorId(Convert.ToInt32(Id));
-
-				ViewBag.Pessoa.Id = Id;
-				ViewBag.ListaPessoa = pessoa;
-				
-				ViewBag.Nome = pessoa.Nome;
-				ViewBag.CPF = pessoa.CPF;
-				ViewBag.Endereco = pessoa.Endereco;
-				ViewBag.Login = pessoa.Login;
-				ViewBag.Senha = pessoa.Senha;				
-			}
-            return View();
         }
+
+        public ActionResult Cadastro(Pessoa pessoa)
+        {
+            return View();          
+        }
+
 
         // POST: Pessoa/Create
         [HttpPost]       
         public ActionResult AdicionaCliente(Pessoa pessoa)
-        {
-			if (pessoa.Id > 0)
-			{
-				if (ModelState.IsValid)
-				{
-					pessoa.Tipo = TipoPessoa.Cliente;
-					dao.Atualizar(pessoa);
-					return RedirectToAction("Index");
-				}
-				else
-				{
-					ViewBag.Pessoa = pessoa;
-					return View("Cadastro");
-				}
-			}
-			else
-			{ 
+        {				 
                 if (ModelState.IsValid)
                 {
                     pessoa.Tipo = TipoPessoa.Cliente;
@@ -85,39 +42,31 @@ namespace Padaria_Rick.Controllers
                 {
                 ViewBag.Pessoa = pessoa;
                 return View("Cadastro");
-                }
-			}
+                }			
 		}
 
-        public ActionResult Editar(int id)
+        [HttpPost]
+        public JsonResult Salvar(Pessoa pessoa)
         {
-            ViewBag.Pessoa = new Pessoa();
-            var pessoa = dao.BuscarPorId(Convert.ToInt32(id));
-
-            ViewBag.Pessoa.Id = id;
-            ViewBag.ListaPessoa = pessoa;
-
-            ViewBag.Nome = pessoa.Nome;
-            ViewBag.CPF = pessoa.CPF;
-            ViewBag.Endereco = pessoa.Endereco;
-            ViewBag.Login = pessoa.Login;
-            ViewBag.Senha = pessoa.Senha;
-      
-            return View();
+            dao.Adicionar(pessoa);
+            return Json("Dados salvos com sucesso");
+        }
+   
+        [HttpPost]
+        public JsonResult Editar(Pessoa pessoa)
+        {         
+                dao.Atualizar(pessoa);
+                return Json("Dados salvos com sucesso.");                  
         }
 
-      
-        [HttpPost]
-        public ActionResult EditarCliente(int id, Pessoa pessoa)
-        {
-
-                
-            return View(pessoa);           
+        public JsonResult CarregaDados(int Id)
+        {          
+            var lista = dao.BuscarPorId(Id);
+            return Json(lista, JsonRequestBehavior.AllowGet);
         }
 
-      
         [HttpPost]
-        public ActionResult Excluir(int id)
+        public JsonResult Excluir(int id)
         {      
             string validacao = (dao.Excluir(id) ? "Sim" : "Não");
        

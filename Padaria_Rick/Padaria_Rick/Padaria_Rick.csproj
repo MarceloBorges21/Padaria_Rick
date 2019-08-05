@@ -211,7 +211,10 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Imagens\13732.png" />
     <Content Include="Imagens\coffee.png" />
+    <Content Include="Imagens\editar.png" />
+    <Content Include="Imagens\excluir.png" />
     <Content Include="Imagens\LogoMaster.png" />
     <Content Include="Imagens\padaria1.jpg" />
     <Content Include="Imagens\rick1.png" />
@@ -244,7 +247,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Pessoa\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Promocaos\" />

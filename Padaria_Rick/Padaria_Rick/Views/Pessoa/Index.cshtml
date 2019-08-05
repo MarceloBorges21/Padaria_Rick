@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script src="~/Scripts/jquery-3.2.1.js"></script>
 <h2 class="text-center">Lista de pessoas</h2>
 <br />
 <table class="table table-dark">
@@ -16,7 +17,12 @@
             <th scope="col">Endereco</th>
             <th scope="col">Tipo</th>
             <th scope="col">Login</th>
-            <th scope="col">Modificar</th>
+            <th scope="col">
+                Editar / Excluir
+                <a href="#" title="Criar nova pessoa" data-target="#novo" data-toggle="modal">
+                    <img src="~/Imagens/13732.png" width="30" height="30" />
+                </a>
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -29,24 +35,37 @@
                 <td>@pessoa.Endereco</td>
                 <td>@pessoa.Tipo</td>
                 <td>@pessoa.Login</td>
-                <td><a href="#" data-toggle="modal" data-target="#modal">Editar</a>/<a href="#" onclick="Excluir(@pessoa.Id);">Deletar</a></td>
+                <td>
+                    <a href="#" title="Editar" data-toggle="modal" onclick="CarregaDados(@pessoa.Id)" data-target="#editar">
+                    <img src="~/Imagens/editar.png" width="35" height="35" />
+                    </a>
+                    |  <a href="#" title="Excluir" onclick="Excluir(@pessoa.Id);">
+                    <img src="~/Imagens/excluir.png" width="35" height="35" />
+                    </a>
+                </td>
             </tr>
         }
     </tbody>
 </table>
 
-<div class="modal" id="modal" tabindex="-1" role="dialog">
+<div class="modal" id="editar" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Formulario de edição</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <div class="modal-body">
-                <form action="/Pessoa/EditarCliente" method="post" class="form-horizontal" id="form">
+                <form action=""  method="post" class="form-horizontal" id="form_editar">
 
-                    <input type="hidden" class="form-control" id="Id" name="Id" value="@ViewBag.Id" />
+                    <input type="hidden" class="form-control" id="idEdicao" name="pessoa.Id" />
 
                     <div class="form-group">
                         <label for="nome" class="col-sm-2 control-label">Nome</label>
                         <div class="col-sm-10">
-                            <input id="nome" class="form-control" name="pessoa.Nome" onkeyup="valida()" required data-ng-message="nome requirido" value="@ViewBag.Nome" />
+                            <input id="nomeEdicao" class="form-control" name="pessoa.Nome" required />
                         </div>
 
                     </div>
@@ -54,21 +73,81 @@
                     <div class="form-group">
                         <label for="cpf" class="col-sm-2 control-label">CPF</label>
                         <div class="col-sm-10">
-                            <input id="cpf" class="form-control" placeholder="000.000.000-00" required name="pessoa.CPF" value="@ViewBag.CPF" />
+                            <input id="cpfEdicao" class="form-control" placeholder="000.000.000-00" required name="pessoa.CPF" />
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="endereco" class="col-sm-2 control-label">Endereço</label>
                         <div class="col-sm-10">
-                            <input id="endereco" class="form-control" name="pessoa.Endereco" required value="@ViewBag.Endereco" />
+                            <input id="enderecoEdicao" class="form-control" name="pessoa.Endereco" required />
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="login" class="col-sm-2 control-label">Login</label>
                         <div class="col-sm-10">
-                            <input id="login" class="form-control" name="pessoa.Login" required value="@ViewBag.Login" />
+                            <input id="loginEdicao" class="form-control" name="pessoa.Login" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha" class="col-sm-2 control-label">Senha</label>
+                        <div class="col-sm-10">
+                            <input type="password" id="senhaEdicao" class="form-control" required name="pessoa.Senha" />
+                        </div>
+                    </div>
+                    <div id="resposta" style="display:none"></div>
+                    <div class="form-group col-sm-10">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="submit" id="formedita" class="btn btn-primary">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="novo" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Formulario de cadastro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+               
+
+                    <input type="hidden" class="form-control" id="id" name="pessoa.Id" />
+
+                    <div class="form-group">
+                        <label for="nome" class="col-sm-2 control-label">Nome</label>
+                        <div class="col-sm-10">
+                            <input id="nome" class="form-control" name="pessoa.Nome" required />
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf" class="col-sm-2 control-label">CPF</label>
+                        <div class="col-sm-10">
+                            <input id="cpf" class="form-control" placeholder="000.000.000-00" required name="pessoa.CPF" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endereco" class="col-sm-2 control-label">Endereço</label>
+                        <div class="col-sm-10">
+                            <input id="endereco" class="form-control" name="pessoa.Endereco" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login" class="col-sm-2 control-label">Login</label>
+                        <div class="col-sm-10">
+                            <input id="login" class="form-control" name="pessoa.Login" required />
                         </div>
                     </div>
 
@@ -78,15 +157,22 @@
                             <input type="password" id="senha" class="form-control" required name="pessoa.Senha" />
                         </div>
                     </div>
-
-                    <div class="modal-footer">
+                    <div id="resposta" style="display:none"></div>
+                    <div class="form-group col-sm-10">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Confirmar</button>
+                        <button type="button" id="Salvar" class="btn btn-primary">Confirmar</button>
                     </div>
-                </form>
+               
             </div>
         </div>
     </div>
 </div>
-<script src="~/Scripts/jquery-3.2.1.js"></script>
+
+
+
+<script src="~/Scripts/jquery.mask.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.maskMoney.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/popper.min.js"></script>
 <script src="~/Scripts/ScriptsDeTelas/Tela_Pessoa.js"></script>
